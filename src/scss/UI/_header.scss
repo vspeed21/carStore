@@ -1,0 +1,51 @@
+@use 'base/mixins' as m;
+@use 'base/variables' as v;
+
+.header{
+  position: relative;
+  
+  &__overlay{
+    position: absolute;
+    background: rgb(0,0,0);
+    background: linear-gradient(270deg, rgba(0,0,0,0.7) 0%, rgba(14,14,14,0.1) 100%);
+    width: 100%;
+    height: 100%;
+  }
+
+  &__contenido{
+    position: absolute;
+    top: 40%;
+    left: 25%;
+
+    color: #fff;
+    @include m.tablet { 
+      top: unset;
+      left: unset;
+      bottom: 20rem;
+      right: 5rem;
+    }
+
+    @include m.desktop {
+      bottom: 20rem;
+      right: 15rem;
+    }
+  }
+
+  &__titulo{
+    font-size: 3rem;
+    margin-bottom: .4rem;
+  }
+
+  &__texto{
+    text-align: center;
+    font-size: 1.4rem;
+  }
+
+  &__bg{
+    background-image: url(../img/timon-header.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 20rem;
+    background-position: center center;
+  }
+}

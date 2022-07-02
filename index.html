@@ -5,12 +5,26 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CarStore</title>
+  <link rel="preconnect" href="build/css/app.css">
   <link rel="stylesheet" href="build/css/app.css">
 </head>
 <body>
 
-  <header class="header header__contenedor">
-    hola
+  <header class="header">
+    <div class="header__overlay">
+      <nav class="navegacion navegacion__contenedor">
+        <a href="#" class="navegacion__enlace">Hyundai</a>
+        <a href="#" class="navegacion__enlace">Toyota</a>
+        <a href="#" class="navegacion__enlace">Honda</a>
+        <a href="#" class="navegacion__enlace">Ford</a>
+      </nav>
+      <div class="header__contenido">
+        <h2 class="header__titulo">Car <span class="header__bold">Store</span></h2>
+        <p class="header__texto">Los mejores en precios</p>
+      </div>
+    </div>
+
+    <div class="header__bg"></div>
   </header>
 
   <script src="build/js/app.js"></script>

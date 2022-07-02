@@ -5,7 +5,7 @@ const imagemin = require('gulp-imagemin');
 
 
 const path = {
-  sass: 'src/scss/*.scss',
+  sass: 'src/scss/**/*.scss',
   js: 'src/js/**/*.js',
   images: 'src/img/**/*.{png,jpg}',
 }
