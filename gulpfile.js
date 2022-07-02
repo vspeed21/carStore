@@ -2,6 +2,8 @@ const { src, dest, series, watch } = require('gulp');
 
 const sass = require('gulp-sass')(require('sass'));
 const imagemin = require('gulp-imagemin');
+const webp = require('gulp-webp');
+const avif = require('gulp-avif');
 
 
 const path = {
@@ -26,6 +28,22 @@ function imagenes( done ) {
   done();
 }
 
+function Vwebp( done ) {
+  src(path.images)
+    .pipe( webp() )
+    .pipe( dest('build/img') );
+
+  done();
+}
+
+function Vavif( done ) {
+  src(path.images)
+    .pipe( avif() )
+    .pipe( dest('build/img') );
+
+  done();
+}
+
 function js( done ) {
   src(path.js)
     .pipe( dest('build/js') )
@@ -43,4 +61,6 @@ function dev( done ) {
 exports.css = css;
 exports.js = js;
 exports.imagenes = imagenes;
-exports.dev = series( css, js,imagenes, dev );
+exports.Vwebp = Vwebp;
+exports.Vavif = Vavif;
+exports.dev = series( css, js, imagenes, Vwebp, Vavif, dev );
