@@ -1,0 +1,32 @@
+{
+  "name": "carstore",
+  "version": "1.0.0",
+  "description": "CarStore con PHP y mysql",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vspeed21/carStore.git"
+  },
+  "keywords": [
+    "PHP",
+    "SASS",
+    "MYSQL"
+  ],
+  "author": "Victor Torres <tikoDev>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vspeed21/carStore/issues"
+  },
+  "homepage": "https://github.com/vspeed21/carStore#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-avif": "^1.1.1",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-sass": "^5.1.0",
+    "gulp-webp": "^4.0.1",
+    "sass": "^1.53.0"
+  }
+}
